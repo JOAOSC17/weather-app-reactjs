@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { GameOver } from './Components/GameOver'
 
 const MemoryGame = () => {
+    const [gameOver, setGameOver]= useState(true);
+    function restart(){
+        setGameOver(false);
+    }
     return (
-        <div>
-            Jogo da memoria
-        </div>
+    <GameOver show={gameOver} handleRestart={restart}></GameOver>
     )
 }
 
