@@ -1,6 +1,6 @@
 import React from 'react'
 import CardElement from './CardElement';
-const GameBoard = (props) => {
+export default function GameBoard (props) {
     return (
         <div id="gameBoard">
             {
@@ -10,5 +10,3 @@ const GameBoard = (props) => {
         </div>
     )
 }
-
-export default GameBoard;

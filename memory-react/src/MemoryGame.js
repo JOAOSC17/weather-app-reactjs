@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import GameOver  from './Components/GameOver'
 import GameBoard from './Components/GameBoard';
 import game from './Game/game';
-const MemoryGame = () => {
+export default function MemoryGame(){
     const [gameOver, setGameOver]= useState(false);
     const [cards, setCards]= useState([]);
     useEffect(() => {
@@ -14,22 +14,13 @@ const MemoryGame = () => {
         setGameOver(false);
     }
     function handleFlip(card){
-            if (game.setCard(card.id)) {
-                if (game.secondCard) {
-                    if (game.checkMatch()) {
-                        game.clearCards();
-                        if (game.checkGameOver()) {
-                            setGameOver(true);
-                        }
-                    } else {
-                        setTimeout(() => {
-                            game.unflipCards();
-                            setCards([...game.cards])
-                        }, 1000);
-        
-                    };
-                }
-            }
+            game.flipCard(card.id, ()=>{
+                //GameOverCallback
+                setGameOver(true);
+            },()=>{
+                //NoMatchCallback
+                setCards([...game.cards])
+            })
         setCards([...game.cards])
         
     }
@@ -41,4 +32,4 @@ const MemoryGame = () => {
     )
 }
 
-export default MemoryGame;
+

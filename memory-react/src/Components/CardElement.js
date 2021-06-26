@@ -1,6 +1,5 @@
 import React from 'react';
-
-const CardElement = (props) => {
+export default function CardElement(props){
     return (
         <div onClick={()=> {props.handleFlip(props.card)}} id={props.id} className={`card ${props.card.flipped? "flip" : ""}`}>
             <div className="card_front">
@@ -14,4 +13,3 @@ const CardElement = (props) => {
     )
 }
 
-export default CardElement;

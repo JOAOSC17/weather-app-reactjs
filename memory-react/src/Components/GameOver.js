@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 
-const GameOver = (props) => {
+export default function GameOver(props){
     return (props.show?
         <div id="gameOver">
         <div>
@@ -11,5 +11,4 @@ const GameOver = (props) => {
     )
 }
 
-export default GameOver;
 
