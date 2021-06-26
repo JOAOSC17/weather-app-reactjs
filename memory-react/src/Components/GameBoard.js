@@ -5,7 +5,7 @@ const GameBoard = (props) => {
         <div id="gameBoard">
             {
                 props.cards.map((card,index)=>
-                <CardElement key={index} card={card}></CardElement>)
+                <CardElement handleFlip={props.handleFlip} key={index} card={card}></CardElement>)
             }
         </div>
     )
