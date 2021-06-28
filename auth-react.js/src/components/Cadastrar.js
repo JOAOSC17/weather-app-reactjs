@@ -2,9 +2,7 @@ import React, { useCallback } from 'react'
 import { withRouter } from 'react-router-dom'
 import { authConfig } from '../auth/config'
 
-export const Cadastrar = withRouter((props) => {
-    const { history } = props;
-    const cadastroFunc = useCallback(
+export const Cadastrar = withRouter(( { history }) =>{    const cadastroFunc = useCallback(
         async (event) =>{
             event.preventDefault();
             const { email, senha } = event.target.elements;
@@ -23,7 +21,7 @@ export const Cadastrar = withRouter((props) => {
            <h1>Cadastrar</h1>
            <form onSubmit={cadastroFunc}>
                <label>Email</label>
-               <input type="email name="email/>
+               <input type="email" name="email"/>
                <label>Senha</label>
                <input type="password" name="senha"/>
                <button type="submit">Cadastrar!!</button>
