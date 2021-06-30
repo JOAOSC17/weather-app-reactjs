@@ -1,0 +1,230 @@
+header{
+    /*background-color: tomato;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid white;
+}
+header h1{
+    font-size: 3rem;
+    color: white;
+}
+header .card{
+    color: #505050;
+    padding: 2rem;
+    background-color: #fff3e4;
+    width: 80%;
+    -webkit-box-shadow: 3px 8px 18px 2px rgba(0,0,0,0.40); 
+box-shadow: 3px 8px 18px 2px rgba(0, 0, 0, 0.40);
+}
+header .card > span{
+    font-size: 1.5rem;
+    color: rgba(255,127,0,1);
+    float: right;
+    cursor: pointer;
+}
+header .card .principal{
+    width: 100%;
+    font-weight: 900;
+    margin-bottom: .8rem;
+}
+header .card .principal h6{
+    font-size: 1rem;
+}
+header .card .principal h4{
+    width: 100%;
+    font-size: 2rem;
+}
+header .card .principal p{
+    display: inline-block;
+    margin: .1rem;
+}
+#temparrow{
+    margin-left: 5.2rem;   
+}
+#vent{
+    margin-right: 3rem;
+}
+header .card .principal .fas{
+    color: rgba(255,127,0,1);
+}
+header .card .principal p span{
+    font-weight: normal;
+}
+header .card .other-day{
+    font-weight: 900;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ff7f00;
+    width: 100%;
+}
+header .card .other-day .day-week p{
+    margin: .2rem 0;
+    padding-top: .5rem;
+    padding-bottom: 0;
+}
+header .card .other-day .day-week span{
+    color: rgba(255,127,0,1);
+}
+.search{
+    width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+.search #search{
+    width: 80%;
+    outline: none;
+    padding: 1rem;
+    margin-left: -3rem;
+    margin-top: -1rem;
+}
+.search button{
+    width: 9%;
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    margin:0rem -3rem;
+    color: rgb(75, 75, 75);
+    cursor: pointer;
+}
+.search #search::placeholder{
+    font-size: 1.3rem;
+}
+@media only screen and (max-width: 530px) {
+    header{
+        max-width: 100%;
+        padding-bottom: 2rem;
+    }
+    header h1{
+        text-align: center;
+        font-size: 2rem;
+        width: 100%;
+        background-color: rgba(255,127,0,1) ;
+    -webkit-box-shadow: 3px 8px 18px 2px rgba(0,0,0,0.10); 
+    box-shadow: 3px 8px 18px 2px rgba(0, 0, 0, 0.10);
+    }
+    header .card{
+        padding: 2rem;
+         width: 80%;
+        -webkit-box-shadow: 3px 8px 18px 2px rgba(0,0,0,0.40); 
+    box-shadow: 3px 8px 18px 2px rgba(0, 0, 0, 0.40);
+    }
+    header .card > span{
+        font-size: 1rem;
+    }
+    header .card .other-day .day-week p{
+        margin: .2rem 0;
+        font-size: 1rem;
+
+    }
+    .search{
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .search #search{
+        width: 70%;
+        padding: .7rem;
+        margin-left: -3rem;
+        margin-top: -1rem;
+    }
+    .search button{
+        width: 8%;
+        font-size: 1.5rem;
+        margin:0rem -3rem;
+    }
+    .search #search::placeholder{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 490px) {
+    header{
+        max-width: 100%;
+        padding-bottom: 2rem;
+    }
+    header h1{
+        text-align: center;
+        font-size: 2rem;
+        background-color: rgba(255,127,0,1) ;
+    }
+    header .card{
+        padding: 1rem;
+        width: 100%;
+       
+    }
+    header .card .principal{
+        font-weight: 900;
+        margin-bottom: .8rem;
+    }
+    header .card .principal h6{
+        font-size: .8rem;
+    }
+    header .card .principal h4{
+        display: block;
+        font-size: 1.6rem;
+    }
+    header .card .principal p{
+        display: inline-block;
+        margin: .1rem;
+    }
+    #temparrow{
+        margin-left: 5rem;   
+    }
+    #vent{
+        margin-right: 2.7rem;
+    }
+    header .card .other-day .day-week p{
+        margin: .2rem 0;
+        font-size: .8rem;
+
+    }
+    .search #search{
+        width: 70%;
+        padding: .5rem;
+    }
+    .search button{
+        width: 7%;
+        font-size: 1.2rem;
+        margin:0rem -2rem;
+    }
+    .search #search::placeholder{
+        font-size: .8rem;
+    }
+}
+@media only screen and (max-width: 335px) {
+    header .card .principal p{
+        display: inline-block;
+        margin: .1rem;
+        font-size: .8rem;
+    }
+    #temparrow{
+        margin-left: 0.5rem;   
+    }
+    #vent{
+        margin-right: .2rem;
+    }
+    header .card .principal p span{
+        font-weight: normal;
+        font-size: .8rem;
+    }
+    header .card .other-day .day-week p{
+       font-size: .7rem;
+    }
+    header .card .other-day .day-week span{
+        font-size: .7rem;
+    }
+    .search #search{
+        padding: .3rem;
+    }
+    .search button{
+        width: 5%;
+        font-size: 1rem;
+        margin:0rem -1.5rem;
+    }
+    .search #search::placeholder{
+        font-size: .5rem;
+    }
+}
